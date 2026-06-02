@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSC PROSOLCONT | Despacho Contable — Estefania Hidalgo</title>
+  <meta name="description" content="PROSOLCONT — Soluciones contables que inspiran confianza. Despacho contable liderado por la Ing. Estefania Hidalgo. Servicios tributarios, laborales, societarios y de nómina en Ecuador.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #0A1F3F;
+      --navy-light: #122E5C;
+      --navy-medium: #1B3D73;
+      --navy-soft: #244A7C;
+      --gold: #C5A55A;
+      --gold-dark: #A8893B;
+      --gold-light: #D4BA78;
+      --gold-bg: rgba(197, 165, 90, 0.08);
+      --gold-bg-hover: rgba(197, 165, 90, 0.15);
+      --white: #FFFFFF;
+      --off-white: #F8F9FC;
+      --gray-50: #F3F4F8;
+      --gray-100: #EBEDF3;
+      --gray-200: #D8DCE6;
+      --gray-300: #B8BFCD;
+      --gray-400: #8D96A8;
+      --gray-600: #4F5B6E;
+      --gray-700: #374151;
+      --gray-900: #111827;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #1DAF54;
+      --font: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --shadow-xs: 0 1px 2px rgba(10,31,63,0.04);
+      --shadow-sm: 0 2px 8px rgba(10,31,63,0.06);
+      --shadow-md: 0 4px 20px rgba(10,31,63,0.08);
+      --shadow-lg: 0 8px 40px rgba(10,31,63,0.10);
+      --shadow-xl: 0 16px 56px rgba(10,31,63,0.14);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      color: var(--gray-700);
+      background: var(--white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+    /* ══════════ BUTTONS ══════════ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px; border-radius: 50px;
+      font-family: var(--font); font-weight: 600; font-size: 0.9rem;
+      cursor: pointer; border: none; transition: all 0.3s var(--ease);
+      letter-spacing: 0.01em; white-space: nowrap;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--navy); box-shadow: 0 4px 24px rgba(197,165,90,0.3);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px); box-shadow: 0 8px 32px rgba(197,165,90,0.4);
+      filter: brightness(1.06);
+    }
+    .btn-navy {
+      background: var(--navy); color: var(--white);
+      box-shadow: 0 4px 20px rgba(10,31,63,0.2);
+    }
+    .btn-navy:hover { background: var(--navy-light); transform: translateY(-2px); }
+    .btn-outline-white {
+      background: transparent; color: var(--white);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5);
+      transform: translateY(-2px);
+    }
+    .btn-whatsapp {
+      background: var(--whatsapp); color: var(--white);
+      box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    }
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark); transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+    }
+
+    /* ══════════ SECTION SHARED ══════════ */
+    .section-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.18em; color: var(--gold); margin-bottom: 14px;
+    }
+    .section-eyebrow::before {
+      content: ''; width: 28px; height: 2px;
+      background: var(--gold); border-radius: 2px;
+    }
+    .section-title {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      color: var(--navy); line-height: 1.22; margin-bottom: 14px;
+    }
+    .section-desc {
+      font-size: 1rem; color: var(--gray-400); max-width: 560px; line-height: 1.75;
+    }
+    .section-center { text-align: center; }
+    .section-center .section-desc { margin: 0 auto; }
+
+    /* ══════════ HEADER ══════════ */
+    header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+      transition: all 0.35s var(--ease); padding: 16px 0;
+    }
+    header.scrolled {
+      background: rgba(10,31,63,0.97); backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px); padding: 10px 0;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.18);
+    }
+    header .container {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    /* Logo */
+    .logo { display: flex; align-items: center; gap: 12px; z-index: 101; }
+    .logo-mark {
+      width: 46px; height: 46px; border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font); font-size: 0.7rem; font-weight: 800;
+      color: var(--navy); letter-spacing: 0.08em; line-height: 1;
+    }
+    .logo-words { line-height: 1.15; }
+    .logo-name {
+      font-family: var(--font-display); font-size: 1.25rem;
+      font-weight: 700; color: var(--white);
+    }
+    .logo-sub {
+      display: block; font-family: var(--font); font-size: 0.58rem;
+      font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); opacity: 0.9; margin-top: 2px;
+    }
+
+    /* Nav */
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a {
+      color: rgba(255,255,255,0.75); font-size: 0.88rem; font-weight: 500;
+      padding: 8px 16px; border-radius: 50px; transition: all 0.3s var(--ease);
+    }
+    nav a:hover, nav a.active {
+      color: var(--white); background: rgba(255,255,255,0.08);
+    }
+    .nav-cta { margin-left: 10px; }
+    .nav-cta .btn { padding: 10px 22px; font-size: 0.82rem; }
+
+    /* Mobile Toggle */
+    .menu-toggle {
+      display: none; background: none; border: none; cursor: pointer;
+      z-index: 101; padding: 6px; flex-direction: column; gap: 5px;
+    }
+    .menu-toggle span {
+      width: 22px; height: 2px; background: var(--white);
+      border-radius: 2px; transition: all 0.3s var(--ease);
+    }
+    .menu-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .menu-toggle.open span:nth-child(2) { opacity: 0; }
+    .menu-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+    .nav-backdrop {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+      z-index: 99; opacity: 0; visibility: hidden; transition: all 0.3s var(--ease);
+    }
+    .nav-backdrop.show { opacity: 1; visibility: visible; }
+
+    /* ══════════ HERO ══════════ */
+    #inicio {
+      min-height: 100vh; display: flex; align-items: center;
+      background: linear-gradient(155deg, var(--navy) 0%, var(--navy-light) 50%, var(--navy-medium) 100%);
+      position: relative; overflow: hidden; padding: 110px 0 70px;
+    }
+    .hero-deco {
+      position: absolute; border-radius: 50%; filter: blur(80px);
+      opacity: 0.06; pointer-events: none;
+    }
+    .hero-deco--1 {
+      width: 500px; height: 500px; background: var(--gold);
+      top: -120px; right: -80px; animation: drift 18s ease-in-out infinite;
+    }
+    .hero-deco--2 {
+      width: 350px; height: 350px; background: var(--gold);
+      bottom: -60px; left: -60px; animation: drift 22s ease-in-out infinite reverse;
+    }
+    @keyframes drift {
+      0%,100% { transform: translate(0,0) scale(1); }
+      50% { transform: translate(25px,-18px) scale(1.04); }
+    }
+    .hero-grid-bg {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+      background-size: 56px 56px;
+    }
+
+    .hero-inner {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .hero-text { max-width: 540px; }
+    .hero-text .section-eyebrow { margin-bottom: 18px; }
+    .hero-heading {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      color: var(--white); line-height: 1.15; margin-bottom: 10px;
+    }
+    .hero-heading .gold { color: var(--gold); }
+    .hero-slogan {
+      font-size: 1rem; font-weight: 500; color: var(--gold-light);
+      margin-bottom: 20px; font-style: italic;
+    }
+    .hero-desc {
+      font-size: 1.05rem; color: rgba(255,255,255,0.65);
+      line-height: 1.8; margin-bottom: 36px;
+    }
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Hero Info Card */
+    .hero-card {
+      background: rgba(255,255,255,0.05); backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: var(--radius-xl); padding: 36px 30px;
+      width: 100%; max-width: 400px; justify-self: center;
+    }
+    .hero-card-heading {
+      font-family: var(--font-display); font-size: 1.2rem;
+      color: var(--white); margin-bottom: 24px;
+    }
+    .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .hero-stat {
+      background: rgba(255,255,255,0.045); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius-md); padding: 18px 14px; text-align: center;
+      transition: all 0.3s var(--ease);
+    }
+    .hero-stat:hover {
+      background: rgba(197,165,90,0.08); border-color: rgba(197,165,90,0.2);
+      transform: translateY(-3px);
+    }
+    .hero-stat-num {
+      font-family: var(--font-display); font-size: 1.8rem; font-weight: 700;
+      color: var(--gold); line-height: 1; margin-bottom: 4px;
+    }
+    .hero-stat-label {
+      font-size: 0.72rem; color: rgba(255,255,255,0.55);
+      font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .hero-card-footer {
+      margin-top: 22px; padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hero-card-footer i {
+      font-size: 1.1rem; color: var(--gold);
+    }
+    .hero-card-footer span {
+      font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.4;
+    }
+    .hero-card-footer strong { color: var(--gold); }
+
+    /* ══════════ SERVICES ══════════ */
+    #servicios { padding: 90px 0; background: var(--off-white); }
+
+    .services-category { margin-bottom: 60px; }
+    .services-category:last-child { margin-bottom: 0; }
+
+    .category-header {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 28px;
+      padding-bottom: 16px; border-bottom: 1px solid var(--gray-200);
+    }
+    .category-icon {
+      width: 48px; height: 48px; border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--navy), var(--navy-medium));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem; color: var(--gold); flex-shrink: 0;
+    }
+    .category-name {
+      font-family: var(--font-display); font-size: 1.25rem;
+      font-weight: 700; color: var(--navy);
+    }
+    .category-entity {
+      font-size: 0.78rem; font-weight: 600; color: var(--gray-400);
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+
+    .services-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+
+    .svc-card {
+      background: var(--white); border: 1px solid var(--gray-100);
+      border-radius: var(--radius-md); padding: 30px 24px;
+      transition: all 0.35s var(--ease); position: relative; overflow: hidden;
+    }
+    .svc-card::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--navy-medium));
+      transform: scaleX(0); transform-origin: left; transition: transform 0.35s var(--ease);
+    }
+    .svc-card:hover {
+      transform: translateY(-5px); box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+    .svc-card:hover::after { transform: scaleX(1); }
+
+    .svc-icon {
+      width: 50px; height: 50px; border-radius: var(--radius-sm);
+      background: var(--gold-bg); display: flex; align-items: center;
+      justify-content: center; font-size: 1.2rem; color: var(--gold);
+      margin-bottom: 16px; transition: all 0.3s var(--ease);
+    }
+    .svc-card:hover .svc-icon {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--navy); transform: scale(1.05);
+    }
+    .svc-card h3 {
+      font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px;
+    }
+    .svc-card p {
+      font-size: 0.88rem; color: var(--gray-400); line-height: 1.65;
+    }
+
+    /* ══════════ ABOUT ══════════ */
+    #nosotros { padding: 90px 0; background: var(--white); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center;
+    }
+    .about-text .section-title { margin-bottom: 16px; }
+    .about-desc {
+      font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 32px;
+    }
+    .about-features { display: flex; flex-direction: column; gap: 18px; }
+    .about-feat {
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .about-feat-icon {
+      width: 44px; height: 44px; min-width: 44px; border-radius: var(--radius-sm);
+      background: var(--gold-bg); display: flex; align-items: center;
+      justify-content: center; font-size: 1rem; color: var(--gold);
+    }
+    .about-feat h4 {
+      font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 2px;
+    }
+    .about-feat p { font-size: 0.85rem; color: var(--gray-400); }
+
+    /* About Profile Image */
+    .about-img-wrapper {
+      position: relative;
+      padding: 10px 10px 20px 0;
+      max-width: 440px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .about-img-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 15px 0 0 15px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      border-radius: var(--radius-lg);
+      z-index: 0;
+    }
+    .about-img-container {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      border: 4px solid var(--white);
+      background: var(--gray-50);
+      aspect-ratio: 1 / 1.05;
+      z-index: 1;
+    }
+    .about-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s var(--ease);
+    }
+    .about-img-container:hover img {
+      transform: scale(1.04);
+    }
+    .about-img-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(10,31,63,0.95) 0%, rgba(10,31,63,0.4) 60%, transparent 100%);
+      padding: 24px 20px;
+      color: var(--white);
+      z-index: 2;
+    }
+    .about-img-info h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+    .about-img-info p {
+      font-size: 0.8rem;
+      color: var(--gold-light);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Pillars */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .pillar {
+      background: var(--gray-50); border: 1px solid var(--gray-100);
+      border-radius: var(--radius-md); padding: 28px 20px; text-align: center;
+      transition: all 0.3s var(--ease);
+    }
+    .pillar:hover {
+      transform: translateY(-4px); box-shadow: var(--shadow-md);
+      border-color: rgba(197,165,90,0.25);
+    }
+    .pillar:nth-child(even) { transform: translateY(16px); }
+    .pillar:nth-child(even):hover { transform: translateY(12px); }
+    .pillar-icon {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), var(--navy-medium));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem; color: var(--gold); margin: 0 auto 12px;
+    }
+    .pillar h3 {
+      font-size: 0.92rem; font-weight: 700; color: var(--navy); margin-bottom: 6px;
+    }
+    .pillar p { font-size: 0.8rem; color: var(--gray-400); line-height: 1.6; }
+
+    /* ══════════ CTA STRIP ══════════ */
+    .cta-strip {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-medium) 100%);
+      padding: 70px 0; position: relative; overflow: hidden;
+    }
+    .cta-strip::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 15% 50%, rgba(197,165,90,0.07), transparent 55%),
+                  radial-gradient(circle at 85% 40%, rgba(255,255,255,0.03), transparent 45%);
+    }
+    .cta-inner {
+      position: relative; z-index: 2; text-align: center;
+    }
+    .cta-inner h2 {
+      font-family: var(--font-display); font-size: clamp(1.7rem,3.5vw,2.3rem);
+      color: var(--white); margin-bottom: 14px;
+    }
+    .cta-inner p {
+      font-size: 1.05rem; color: rgba(255,255,255,0.65);
+      max-width: 520px; margin: 0 auto 32px;
+    }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* ══════════ CONTACT ══════════ */
+    #contacto { padding: 90px 0; background: var(--off-white); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.25fr; gap: 50px; align-items: start;
+    }
+    .contact-info .section-title { margin-bottom: 14px; }
+    .contact-info-desc {
+      color: var(--gray-400); font-size: 0.95rem; margin-bottom: 32px; line-height: 1.75;
+    }
+    .contact-items { display: flex; flex-direction: column; gap: 22px; margin-bottom: 32px; }
+    .contact-item { display: flex; gap: 14px; align-items: center; }
+    .contact-item-icon {
+      width: 46px; height: 46px; min-width: 46px; border-radius: var(--radius-sm);
+      background: var(--gold-bg); display: flex; align-items: center;
+      justify-content: center; font-size: 1rem; color: var(--gold);
+    }
+    .contact-item h4 {
+      font-size: 0.78rem; font-weight: 700; color: var(--navy);
+      text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1px;
+    }
+    .contact-item p,
+    .contact-item a {
+      font-size: 0.9rem; color: var(--gray-400); transition: color 0.3s;
+    }
+    .contact-item a:hover { color: var(--gold); }
+
+    /* Form */
+    .form-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: 40px; box-shadow: var(--shadow-lg); border: 1px solid var(--gray-100);
+    }
+    .form-card h3 {
+      font-family: var(--font-display); font-size: 1.3rem;
+      color: var(--navy); margin-bottom: 6px;
+    }
+    .form-card .form-sub {
+      font-size: 0.88rem; color: var(--gray-400); margin-bottom: 28px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .field { display: flex; flex-direction: column; gap: 5px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label {
+      font-size: 0.76rem; font-weight: 700; color: var(--navy);
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .field input, .field select, .field textarea {
+      width: 100%; padding: 13px 16px;
+      border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm);
+      font-family: var(--font); font-size: 0.92rem; color: var(--gray-700);
+      background: var(--gray-50); outline: none; transition: all 0.3s var(--ease);
+    }
+    .field input::placeholder, .field textarea::placeholder { color: var(--gray-300); }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      border-color: var(--gold); background: var(--white);
+      box-shadow: 0 0 0 4px var(--gold-bg);
+    }
+    .field textarea { resize: vertical; min-height: 110px; }
+    .field select {
+      cursor: pointer; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238D96A8' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center;
+      padding-right: 36px;
+    }
+    .form-submit { margin-top: 6px; }
+    .form-submit .btn { width: 100%; justify-content: center; padding: 15px; font-size: 0.95rem; }
+
+    .form-ok {
+      display: none; text-align: center; padding: 36px 16px;
+    }
+    .form-ok.show { display: block; animation: rise 0.5s var(--ease); }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .form-ok-icon {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--whatsapp), var(--whatsapp-dark));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; color: var(--white); margin: 0 auto 16px;
+    }
+    .form-ok h3 {
+      font-family: var(--font-display); font-size: 1.4rem;
+      color: var(--navy); margin-bottom: 6px;
+    }
+    .form-ok p { color: var(--gray-400); font-size: 0.92rem; }
+
+    /* ══════════ FOOTER ══════════ */
+    footer {
+      background: var(--navy); color: rgba(255,255,255,0.55); padding: 52px 0 0;
+    }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px; padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-brand .logo { margin-bottom: 14px; }
+    .footer-brand p { font-size: 0.85rem; line-height: 1.7; max-width: 280px; }
+    .footer-socials { display: flex; gap: 8px; margin-top: 16px; }
+    .footer-social {
+      width: 38px; height: 38px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; color: rgba(255,255,255,0.55);
+      transition: all 0.3s var(--ease);
+    }
+    .footer-social:hover {
+      background: var(--gold); border-color: var(--gold);
+      color: var(--navy); transform: translateY(-3px);
+    }
+    .footer-col h4 {
+      font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--white); margin-bottom: 16px;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { font-size: 0.85rem; transition: all 0.3s; }
+    .footer-col a:hover { color: var(--gold); padding-left: 3px; }
+
+    .footer-newsletter p { font-size: 0.85rem; margin-bottom: 14px; }
+    .footer-newsletter-form { display: flex; gap: 6px; }
+    .footer-newsletter-form input {
+      flex: 1; padding: 11px 14px; border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05); color: var(--white);
+      font-family: var(--font); font-size: 0.84rem; outline: none;
+      transition: border-color 0.3s;
+    }
+    .footer-newsletter-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .footer-newsletter-form input:focus { border-color: var(--gold); }
+    .footer-newsletter-form button {
+      padding: 11px 18px; border-radius: 50px; border: none;
+      background: var(--gold); color: var(--navy);
+      font-weight: 600; font-size: 0.82rem; cursor: pointer;
+      transition: background 0.3s;
+    }
+    .footer-newsletter-form button:hover { background: var(--gold-dark); }
+
+    .footer-bottom {
+      padding: 20px 0; display: flex; justify-content: space-between;
+      align-items: center; font-size: 0.78rem;
+    }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { transition: color 0.3s; }
+    .footer-legal a:hover { color: var(--gold); }
+
+    /* ══════════ WHATSAPP FLOAT ══════════ */
+    .wa-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 90;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: var(--whatsapp); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.7rem; box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+      transition: all 0.35s var(--ease); cursor: pointer;
+      animation: pulse-wa 2.5s ease-in-out infinite;
+    }
+    .wa-float:hover {
+      transform: scale(1.1); box-shadow: 0 8px 36px rgba(37,211,102,0.55);
+    }
+    @keyframes pulse-wa {
+      0%,100% { box-shadow: 0 6px 28px rgba(37,211,102,0.45); }
+      50% { box-shadow: 0 6px 28px rgba(37,211,102,0.45), 0 0 0 12px rgba(37,211,102,0.12); }
+    }
+    .wa-float-tooltip {
+      position: absolute; right: 68px; top: 50%; transform: translateY(-50%);
+      background: var(--white); color: var(--gray-700);
+      padding: 8px 14px; border-radius: var(--radius-sm);
+      font-size: 0.8rem; font-weight: 600; white-space: nowrap;
+      box-shadow: var(--shadow-md);
+      opacity: 0; pointer-events: none; transition: opacity 0.3s;
+    }
+    .wa-float:hover .wa-float-tooltip { opacity: 1; }
+
+    /* ══════════ REVEAL ══════════ */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ══════════ RESPONSIVE ══════════ */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .hero-text { max-width: 100%; }
+      .hero-buttons { justify-content: center; }
+      .hero-card { max-width: 380px; justify-self: center; order: -1; }
+      .services-row { grid-template-columns: repeat(2,1fr); }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 30px; }
+    }
+    @media (max-width: 768px) {
+      nav {
+        position: fixed; top: 0; right: -100%; width: 78%; max-width: 340px;
+        height: 100vh; background: var(--navy);
+        flex-direction: column; justify-content: center; align-items: center;
+        gap: 6px; transition: right 0.35s var(--ease);
+        box-shadow: -8px 0 30px rgba(0,0,0,0.25);
+      }
+      nav.open { right: 0; }
+      nav a { font-size: 1.05rem; padding: 12px 28px; }
+      .nav-cta { margin: 14px 0 0; }
+      .menu-toggle { display: flex; }
+      .services-row { grid-template-columns: 1fr; }
+      .pillars { grid-template-columns: 1fr 1fr; }
+      .pillar:nth-child(n) { transform: none; }
+      .pillar:nth-child(n):hover { transform: translateY(-4px); }
+      .form-row { grid-template-columns: 1fr; }
+      .form-card { padding: 28px 20px; }
+      .footer-top { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom {
+        flex-direction: column; gap: 10px; text-align: center;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .hero-buttons .btn { width: 100%; justify-content: center; }
+      .hero-stats { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .pillars { grid-template-columns: 1fr; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .cta-btns .btn { width: 100%; max-width: 300px; justify-content: center; }
+      .category-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- ═══ HEADER ═══ -->
+  <header id="siteHeader">
+    <div class="container">
+      <a href="#inicio" class="logo">
+        <div class="logo-mark">PSC</div>
+        <div class="logo-words">
+          <span class="logo-name">PROSOLCONT</span>
+          <span class="logo-sub">Despacho Contable</span>
+        </div>
+      </a>
+      <nav id="siteNav">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <div class="nav-cta">
+          <a href="https://wa.me/593982856714?text=Hola%20Prosolcont,%20deseo%20solicitar%20una%20asesor%C3%ADa%20contable%20con%20la%20Ing.%20Estefania%20Hidalgo." target="_blank" class="btn btn-gold">
+            <i class="fab fa-whatsapp"></i> Agendar Asesoría
+          </a>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══ HERO ═══ -->
+    <section id="inicio">
+      <div class="hero-deco hero-deco--1"></div>
+      <div class="hero-deco hero-deco--2"></div>
+      <div class="hero-grid-bg"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <div class="section-eyebrow">PSC Prosolcont — Estefania Hidalgo</div>
+            <h1 class="hero-heading">
+              Asesoría contable y tributaria <span class="gold">integral</span> para su tranquilidad
+            </h1>
+            <p class="hero-slogan">"Soluciones contables que inspiran confianza — Despacho Contable"</p>
+            <p class="hero-desc">
+              Acompañamos a <strong>Empresas</strong> y <strong>Personas Naturales</strong> en Ecuador con servicios especializados ante el SRI, Ministerio del Trabajo, Superintendencia de Compañías e IESS. Su cumplimiento legal y financiero está en las mejores manos.
+            </p>
+            <div class="hero-buttons">
+              <a href="https://wa.me/593982856714?text=Hola%20Prosolcont,%20deseo%20solicitar%20una%20asesor%C3%ADa%20contable%20con%20la%20Ing.%20Estefania%20Hidalgo." target="_blank" class="btn btn-gold">
+                <i class="fab fa-whatsapp"></i> Solicitar Consulta Gratuita
+              </a>
+              <a href="#servicios" class="btn btn-outline-white">
+                <i class="fas fa-arrow-right"></i> Ver Servicios
+              </a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <h3 class="hero-card-heading">¿Por qué Prosolcont?</h3>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hero-stat-num">100%</div>
+                <div class="hero-stat-label">Cumplimiento</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">500+</div>
+                <div class="hero-stat-label">Declaraciones</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">98%</div>
+                <div class="hero-stat-label">Satisfacción</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">24h</div>
+                <div class="hero-stat-label">Respuesta</div>
+              </div>
+            </div>
+            <div class="hero-card-footer">
+              <i class="fas fa-shield-halved"></i>
+              <span><strong>Confidencialidad total</strong><br>Su información protegida siempre</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICES ═══ -->
+    <section id="servicios">
+      <div class="container">
+        <div class="section-center reveal" style="margin-bottom:50px;">
+          <div class="section-eyebrow">Nuestros Servicios</div>
+          <h2 class="section-title">Soluciones especializadas para cada necesidad</h2>
+          <p class="section-desc">
+            Prosolcont ofrece un portafolio integral de servicios contables, tributarios, laborales y societarios respaldados por la experiencia de la Ing. Estefania Hidalgo.
+          </p>
+        </div>
+
+        <!-- SRI -->
+        <div class="services-category reveal">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-landmark"></i></div>
+            <div>
+              <div class="category-name">Servicios Tributarios</div>
+              <div class="category-entity">Servicio de Rentas Internas (SRI)</div>
+            </div>
+          </div>
+          <div class="services-row">
+            <div class="svc-card">
+              <div class="svc-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+              <h3>Declaraciones Tributarias</h3>
+              <p>Preparación y presentación de declaraciones de IVA, Impuesto a la Renta y demás obligaciones fiscales con precisión y puntualidad.</p>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon"><i class="fas fa-folder-open"></i></div>
+              <h3>Presentación de Anexos</h3>
+              <p>Elaboración y envío de Anexos Transaccionales (ATS), RDEP, APS, ADI y demás reportes exigidos por el SRI.</p>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+              <h3>Recuperación de Impuestos</h3>
+              <p>Gestión profesional para la devolución de IVA, retenciones y otros saldos a favor del contribuyente.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MINISTERIO DEL TRABAJO -->
+        <div class="services-category reveal">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-briefcase"></i></div>
+            <div>
+              <div class="category-name">Gestión Laboral</div>
+              <div class="category-entity">Ministerio del Trabajo</div>
+            </div>
+          </div>
+          <div class="services-row">
+            <div class="svc-card">
+              <div class="svc-icon"><i class="fas fa-file-signature"></i></div>
+              <h3>Contratos de Trabajo</h3>
+              <p>Elaboración, legalización y registro de contratos individuales y colectivos conforme a la normativa laboral vigente.</p>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon"><i class="fas fa-coins"></i></div>
+              <h3>Décimos y Utilidades</h3>
+              <p>Cálculo y declaración del Décimo Tercero, Décimo Cuarto sueldo y reparto de utilidades dentro de los plazos legales.</p>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon"><i class="fas fa-file-contract"></i></div>
+              <h3>Actas de Finiquito</h3>
+              <p>Liquidación y trámite de actas de finiquito ante el Ministerio del Trabajo, garantizando el cumplimiento de derechos laborales.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUPERINTENDENCIA DE COMPAÑÍAS -->
+        <div class="services-category reveal">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-building-columns"></i></div>
+            <div>
+              <div class="category-name">Servicios Societarios</div>
+              <div class="category-entity">Superintendencia de Compañías y Valores</div>
+            </div>
+          </div>
+          <div class="services-row">
+            <div class="svc-card">
+              <div class="svc-icon"><i class="fas fa-chart-bar"></i></div>
+              <h3>Estados Financieros</h3>
+              <p>Elaboración de Estados de Situación Financiera, Resultados, Flujo de Efectivo y demás reportes bajo normativa NIIF.</p>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon"><i class="fas fa-calculator"></i></div>
+              <h3>Contabilidad Externa</h3>
+              <p>Outsourcing contable integral: registros, conciliaciones, libros mayores y reportes periódicos con la más alta calidad.</p>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon"><i class="fas fa-clipboard-check"></i></div>
+              <h3>Informe de Comisariato</h3>
+              <p>Preparación del informe del comisario para la junta de accionistas, cumpliendo con los requerimientos societarios vigentes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- IESS -->
+        <div class="services-category reveal">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-users-gear"></i></div>
+            <div>
+              <div class="category-name">Seguridad Social y Nómina</div>
+              <div class="category-entity">Instituto Ecuatoriano de Seguridad Social (IESS)</div>
+            </div>
+          </div>
+          <div class="services-row">
+            <div class="svc-card">
+              <div class="svc-icon"><i class="fas fa-people-group"></i></div>
+              <h3>Manejo de Nóminas</h3>
+              <p>Administración completa de la nómina de sus colaboradores, incluyendo cálculo de aportes, fondos de reserva y provisiones.</p>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon"><i class="fas fa-receipt"></i></div>
+              <h3>Roles de Pagos</h3>
+              <p>Generación mensual de roles de pagos individuales y consolidados, con detalle de ingresos, descuentos y valores netos.</p>
+            </div>
+            <div class="svc-card">
+              <div class="svc-icon"><i class="fas fa-user-plus"></i></div>
+              <h3>Avisos de Entrada y Salida</h3>
+              <p>Registro oportuno de avisos de entrada y salida de empleados en el sistema del IESS, evitando multas y sanciones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section id="nosotros">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Columna 1: Foto Profesional -->
+          <div class="about-img-wrapper reveal">
+            <div class="about-img-container">
+              <img src="estefania-hidalgo.jpg" alt="Ing. Estefania Hidalgo — Directora General de PROSOLCONT">
+              <div class="about-img-overlay">
+                <div class="about-img-info">
+                  <h3>Ing. Estefania Hidalgo</h3>
+                  <p>Directora General / Contadora</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Columna 2: Texto Descriptivo -->
+          <div class="about-text reveal">
+            <div class="section-eyebrow">Sobre Prosolcont</div>
+            <h2 class="section-title">Su aliada estratégica en el cumplimiento contable y tributario</h2>
+            <p class="about-desc">
+              PROSOLCONT, liderada por la Contadora Estefania Hidalgo, es un despacho contable comprometido con la excelencia profesional. Combinamos el dominio de la normativa ecuatoriana vigente con herramientas tecnológicas modernas para brindar soluciones contables, tributarias, laborales y societarias que generan verdadera tranquilidad a nuestros clientes.
+            </p>
+            <div class="about-features">
+              <div class="about-feat">
+                <div class="about-feat-icon"><i class="fas fa-user-shield"></i></div>
+                <div>
+                  <h4>Ética y Confidencialidad</h4>
+                  <p>Su información financiera protegida bajo los más altos estándares de seguridad.</p>
+                </div>
+              </div>
+              <div class="about-feat">
+                <div class="about-feat-icon"><i class="fas fa-clock"></i></div>
+                <div>
+                  <h4>Puntualidad Garantizada</h4>
+                  <p>Cumplimos cada plazo fiscal y entregamos reportes a tiempo, siempre.</p>
+                </div>
+              </div>
+              <div class="about-feat">
+                <div class="about-feat-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div>
+                  <h4>Normativa Actualizada</h4>
+                  <p>Capacitación continua en las últimas reformas tributarias y laborales del Ecuador.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilares de Valor (debajo de la cuadrícula principal) -->
+        <div class="pillars reveal" style="margin-top: 60px;">
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-lock"></i></div>
+            <h3>Confidencialidad</h3>
+            <p>Protocolos rigurosos de seguridad para su información.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-award"></i></div>
+            <h3>Experiencia</h3>
+            <p>Trayectoria sólida resolviendo desafíos contables complejos.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3>Innovación Digital</h3>
+            <p>Herramientas tecnológicas para procesos ágiles y eficientes.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
+            <h3>Compromiso</h3>
+            <p>Tratamos su empresa como propia, con total dedicación.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section class="cta-strip">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <h2>¿Necesita asesoría contable profesional?</h2>
+          <p>Contáctenos hoy y reciba una consulta personalizada con la Ing. Estefania Hidalgo. Sin compromiso.</p>
+          <div class="cta-btns">
+            <a href="#contacto" class="btn btn-gold">
+              <i class="fas fa-calendar-check"></i> Solicitar Consulta
+            </a>
+            <a href="https://wa.me/593982856714?text=Hola%20Prosolcont,%20deseo%20solicitar%20una%20asesor%C3%ADa%20contable%20con%20la%20Ing.%20Estefania%20Hidalgo." target="_blank" class="btn btn-outline-white">
+              <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contacto">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="section-eyebrow">Contáctenos</div>
+            <h2 class="section-title">Hablemos sobre lo que necesita</h2>
+            <p class="contact-info-desc">
+              Estamos a su disposición para resolver cualquier consulta contable, tributaria o laboral. Escríbanos o llámenos directamente.
+            </p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <h4>Teléfono / Celular</h4>
+                  <a href="tel:+593982856714">0982 856 714</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <h4>Correo Electrónico</h4>
+                  <a href="mailto:estefaniahidalgo2018@gmail.com">estefaniahidalgo2018@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fas fa-at"></i></div>
+                <div>
+                  <h4>Correo Alternativo</h4>
+                  <a href="mailto:estefaniahidalgo2017@hotmail.com">estefaniahidalgo2017@hotmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
+                <div>
+                  <h4>WhatsApp Directo</h4>
+                  <a href="https://wa.me/593982856714?text=Hola%20Prosolcont,%20deseo%20solicitar%20una%20asesor%C3%ADa%20contable%20con%20la%20Ing.%20Estefania%20Hidalgo." target="_blank">Enviar mensaje por WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            <a href="https://wa.me/593982856714?text=Hola%20Prosolcont,%20deseo%20solicitar%20una%20asesor%C3%ADa%20contable%20con%20la%20Ing.%20Estefania%20Hidalgo." target="_blank" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
+            </a>
+          </div>
+
+          <div class="form-card reveal">
+            <h3>Envíenos su Consulta</h3>
+            <p class="form-sub">Complete el formulario y la Ing. Estefania Hidalgo le responderá en menos de 24 horas.</p>
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="field">
+                  <label for="nombre">Nombre Completo</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="Ej: María López" required>
+                </div>
+                <div class="field">
+                  <label for="telefono">Teléfono</label>
+                  <input type="tel" id="telefono" name="telefono" placeholder="0999 999 999" required>
+                </div>
+                <div class="field">
+                  <label for="correo">Correo Electrónico</label>
+                  <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="field">
+                  <label for="servicio">Servicio Requerido</label>
+                  <select id="servicio" name="servicio" required>
+                    <option value="" disabled selected>Seleccione un servicio</option>
+                    <option value="sri">SRI — Servicios Tributarios</option>
+                    <option value="laboral">Ministerio del Trabajo — Gestión Laboral</option>
+                    <option value="supercias">Superintendencia de Compañías — Societario</option>
+                    <option value="iess">IESS — Seguridad Social y Nómina</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label for="mensaje">Su Consulta</label>
+                  <textarea id="mensaje" name="mensaje" placeholder="Describa brevemente lo que necesita..." required></textarea>
+                </div>
+                <div class="field full form-submit">
+                  <button type="submit" class="btn btn-gold" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Enviar Consulta
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div class="form-ok" id="formOk">
+              <div class="form-ok-icon"><i class="fas fa-check"></i></div>
+              <h3>¡Consulta Enviada!</h3>
+              <p>Gracias por contactar a Prosolcont. La Ing. Estefania Hidalgo se comunicará con usted a la brevedad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#inicio" class="logo">
+            <div class="logo-mark">PSC</div>
+            <div class="logo-words">
+              <span class="logo-name">PROSOLCONT</span>
+              <span class="logo-sub">Despacho Contable</span>
+            </div>
+          </a>
+          <p>Soluciones contables que inspiran confianza. Despacho contable liderado por la Ing. Estefania Hidalgo al servicio de empresas y personas naturales en Ecuador.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/593982856714?text=Hola%20Prosolcont,%20deseo%20solicitar%20una%20asesor%C3%ADa%20contable%20con%20la%20Ing.%20Estefania%20Hidalgo." target="_blank" class="footer-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:estefaniahidalgo2018@gmail.com" class="footer-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#servicios">Tributarios (SRI)</a></li>
+            <li><a href="#servicios">Gestión Laboral</a></li>
+            <li><a href="#servicios">Societarios</a></li>
+            <li><a href="#servicios">Nómina (IESS)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-newsletter">
+          <h4>Boletín Tributario</h4>
+          <p>Reciba alertas sobre cambios normativos y consejos fiscales.</p>
+          <div class="footer-newsletter-form">
+            <input type="email" placeholder="Su correo electrónico" aria-label="Correo boletín">
+            <button type="button">Suscribir</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 PROSOLCONT — Soluciones Contables que Inspiran Confianza. Dirección General: Estefania Hidalgo.</p>
+        <div class="footer-legal">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ WHATSAPP FLOTANTE ═══ -->
+  <a href="https://wa.me/593982856714?text=Hola%20Prosolcont,%20deseo%20solicitar%20una%20asesor%C3%ADa%20contable%20con%20la%20Ing.%20Estefania%20Hidalgo." target="_blank" class="wa-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-float-tooltip">¡Escríbanos por WhatsApp!</span>
+  </a>
+
+  <script>
+    /* ═══ Header scroll ═══ */
+    const siteHeader = document.getElementById('siteHeader');
+    function onScroll() {
+      siteHeader.classList.toggle('scrolled', window.scrollY > 50);
+      const sects = document.querySelectorAll('section[id]');
+      const links = document.querySelectorAll('#siteNav a[href^="#"]');
+      let cur = '';
+      sects.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
+      links.forEach(l => {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + cur);
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    /* ═══ Mobile menu ═══ */
+    const menuToggle = document.getElementById('menuToggle');
+    const siteNav = document.getElementById('siteNav');
+    const navBackdrop = document.getElementById('navBackdrop');
+    function toggleNav() {
+      menuToggle.classList.toggle('open');
+      siteNav.classList.toggle('open');
+      navBackdrop.classList.toggle('show');
+      document.body.style.overflow = siteNav.classList.contains('open') ? 'hidden' : '';
+    }
+    menuToggle.addEventListener('click', toggleNav);
+    navBackdrop.addEventListener('click', toggleNav);
+    document.querySelectorAll('#siteNav a').forEach(a =>
+      a.addEventListener('click', () => { if (siteNav.classList.contains('open')) toggleNav(); })
+    );
+
+    /* ═══ Smooth scroll ═══ */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    /* ═══ Form ═══ */
+    const form = document.getElementById('contactForm');
+    const formOk = document.getElementById('formOk');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+      btn.disabled = true;
+      setTimeout(() => {
+        form.style.display = 'none';
+        formOk.classList.add('show');
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Consulta';
+        btn.disabled = false;
+      }, 1400);
+    });
+
+    /* ═══ Scroll reveal ═══ */
+    function reveal() {
+      document.querySelectorAll('.reveal').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 80) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', reveal, { passive: true });
+    window.addEventListener('load', () => { reveal(); onScroll(); });
+
+    /* ═══ Counter animation ═══ */
+    function animateNums() {
+      document.querySelectorAll('.hero-stat-num').forEach(el => {
+        if (el.dataset.done) return;
+        const raw = el.textContent;
+        const m = raw.match(/(\d+)/);
+        if (!m) return;
+        const target = +m[0];
+        const pre = raw.substring(0, raw.indexOf(m[0]));
+        const suf = raw.replace(m[0], '').replace(pre, '');
+        let cur = 0;
+        const step = Math.ceil(target / 50);
+        el.dataset.done = '1';
+        (function tick() {
+          cur = Math.min(cur + step, target);
+          el.textContent = pre + cur + suf;
+          if (cur < target) requestAnimationFrame(tick);
+        })();
+      });
+    }
+    new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { setTimeout(animateNums, 400); obs.disconnect(); }
+      });
+    }, { threshold: 0.3 }).observe(document.querySelector('.hero-card'));
+  </script>
+</body>
+</html>
